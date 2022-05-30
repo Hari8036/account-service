@@ -72,7 +72,7 @@ public class Customer {
 		return fee;
 	}
 
-	public void setFeee(double fee) {
+	public void setFee(double fee) {
 		this.fee = fee;
 	}
 

@@ -16,12 +16,12 @@ public class CustomerService {
 	private CustomerRepository customerRepository;
 
 	public Customer save(Customer customer) {
-		double fee = customer.getFee();
-		double tax = (fee * 10) / 100;
-		double totalValue = customer.getTotalValue();
+		double fee=customer.getFee();
+		double tax=(fee*10)/100;
+		double totalValue=fee+tax;
 		customer.setTotalValue(totalValue);
 		customer.setTax(tax);
-		Customer newCustomer = customerRepository.save(customer);
+		Customer newCustomer=customerRepository.save(customer);
 		return newCustomer;
 
 	}
